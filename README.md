@@ -1,5 +1,5 @@
 #FIX
-BUG: the complete function will apply twice when I use jQuery 1.10.2
+BUG: the complete function will apply twice when I use jQuery 1.10.2.
 FIX: filter complete function when css(properties);
 
 
