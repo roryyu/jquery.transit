@@ -1,3 +1,8 @@
+#FIX
+BUG: the complete function will apply twice when I use jQuery 1.10.2
+FIX: filter complete function when css(properties);
+
+
 # [jQuery Transit](http://ricostacruz.com/jquery.transit)
 #### Super-smooth CSS3 transformations and transitions for jQuery
 

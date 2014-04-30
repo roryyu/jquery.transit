@@ -646,10 +646,10 @@
         if (i > 0) {
           this.style[support.transition] = transitionValue;
         }
-        $(this).css(properties);
+        $(this).css(cp(properties));
       });
     };
-
+    
     // Defer running. This allows the browser to paint any pending CSS it hasn't
     // painted yet before doing the transitions.
     var deferredRun = function(next) {
@@ -663,7 +663,15 @@
     // Chainability.
     return this;
   };
-
+	function cp(properties){
+		var pp={}; 
+		for(var p in properties){
+			if(!(properties[p] instanceof Function)){
+				   pp[p] = properties[p];				
+			}
+		}
+		return pp;
+	}
   function registerCssHook(prop, isPixels) {
     // For certain properties, the 'px' should not be implied.
     if (!isPixels) { $.cssNumber[prop] = true; }
